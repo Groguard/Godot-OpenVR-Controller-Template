@@ -3,7 +3,7 @@ A basic Godot OpenVR controller template
 This was built using Godot 3.2 and the latest openvr addon from the assests library.
 
 # Current Features
-- Picking up and dropping opbject
+- Picking up and dropping objects
 - Climbable objects
 - Object tool belt
 - Basic Smooth locomotion
