@@ -1,0 +1,246 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://addons/godot-openvr/scenes/ovr_first_person.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/Viewport-UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://addons/vr-common/functions/Function_Direct_movement.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Models/building/Floor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Models/building/Crate2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/vr-common/functions/Function_Pickup.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Models/hands/Left_Controller.gd" type="Script" id=8]
+[ext_resource path="res://Models/hands/Right_Controller.gd" type="Script" id=9]
+[ext_resource path="res://audio/Soundrangers_Nature_Ambience/coastal_ambience_01_120_loop.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Models/effects/Smoke_particles.tres" type="Material" id=11]
+[ext_resource path="res://Models/effects/Smoke_quad.tres" type="QuadMesh" id=12]
+[ext_resource path="res://Models/effects/jkm_muzzleflash/MuzzleFlash.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Models/weapons/M1911/M1911.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Models/weapons/Magazine/Magazine.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Models/targets/target.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Models/player_items/vr_glove_right_model.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Models/player_items/vr_glove_left_model.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Models/building/Sphere/Sphere_Target.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Models/building/Wall.tscn" type="PackedScene" id=20]
+[ext_resource path="res://features/origin/Toolbelt.tscn" type="PackedScene" id=21]
+[ext_resource path="res://features/origin/Feature_Climbing.tscn" type="PackedScene" id=22]
+[ext_resource path="res://features/controller/Feature_StaticGrab.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Models/building/Grips.tscn" type="PackedScene" id=24]
+[ext_resource path="res://addons/godot-openvr/scenes/ovr_first_person.gd" type="Script" id=25]
+[ext_resource path="res://Models/building/JungleGym.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Models/building/GripRail1.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Models/backgrounds/WorldEnvironment.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Models/building/Ramp.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Models/building/RockClimb.tscn" type="PackedScene" id=30]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Viewport-VR" type="Viewport" parent="."]
+arvr = true
+render_target_update_mode = 3
+audio_listener_enable_3d = true
+
+[node name="OVRFirstPerson" parent="Viewport-VR" instance=ExtResource( 1 )]
+script = ExtResource( 25 )
+
+[node name="ARVRCamera" parent="Viewport-VR/OVRFirstPerson" index="0"]
+fov = 90.9
+
+[node name="Particles" type="Particles" parent="Viewport-VR/OVRFirstPerson/ARVRCamera/shader_cache" index="5"]
+emitting = false
+one_shot = true
+process_material = ExtResource( 11 )
+draw_pass_1 = ExtResource( 12 )
+
+[node name="MeshInstance" parent="Viewport-VR/OVRFirstPerson/ARVRCamera/shader_cache" index="6" instance=ExtResource( 13 )]
+
+[node name="Function_Direct_movement" parent="Viewport-VR/OVRFirstPerson/Left_Hand" index="1" instance=ExtResource( 4 )]
+script = ExtResource( 8 )
+camera = NodePath("../../ARVRCamera")
+player_radius = 0.1
+turn_delay = 0.3
+max_speed = 150.0
+move_type = 1
+canFly = false
+
+[node name="Function_Pickup" parent="Viewport-VR/OVRFirstPerson/Left_Hand" index="2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.694658, 0.719339, 0, -0.719339, 0.694658, 0, -0.0817499, 0.0582636 )
+impulse_factor = 1.5
+
+[node name="Feature_StaticGrab" parent="Viewport-VR/OVRFirstPerson/Left_Hand" index="3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00567573, -0.0569261, 0.111042 )
+
+[node name="vr_glove_left_model" parent="Viewport-VR/OVRFirstPerson/Left_Hand" index="4" instance=ExtResource( 18 )]
+transform = Transform( -1, -2.30405e-07, -2.30405e-07, 2.83989e-08, 0.642787, -0.766044, 3.246e-07, -0.766044, -0.642787, -0.025, -0.0207525, 0.144762 )
+
+[node name="Function_Direct_movement" parent="Viewport-VR/OVRFirstPerson/Right_Hand" index="1" instance=ExtResource( 4 )]
+script = ExtResource( 9 )
+camera = NodePath("../../ARVRCamera")
+player_radius = 0.1
+turn_delay = 0.0
+turn_angle = 1.0
+max_speed = 25.0
+
+[node name="Function_Pickup" parent="Viewport-VR/OVRFirstPerson/Right_Hand" index="2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 0.681998, 0.731353, 0, -0.731353, 0.681998, 0, -0.0817499, 0.0582636 )
+impulse_factor = 1.5
+
+[node name="Feature_StaticGrab" parent="Viewport-VR/OVRFirstPerson/Right_Hand" index="3" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00567573, -0.0569261, 0.111042 )
+
+[node name="vr_glove_right_model" parent="Viewport-VR/OVRFirstPerson/Right_Hand" index="4" instance=ExtResource( 17 )]
+transform = Transform( -1, 2.30405e-07, 2.30405e-07, -2.83989e-08, 0.642787, -0.766044, -3.246e-07, -0.766044, -0.642787, 0.025, -0.0207525, 0.144762 )
+
+[node name="Toolbelt" parent="Viewport-VR/OVRFirstPerson" instance=ExtResource( 21 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+camera = NodePath("../ARVRCamera")
+
+[node name="Feature_Climbing" parent="Viewport-VR/OVRFirstPerson" instance=ExtResource( 22 )]
+
+[node name="World" type="Spatial" parent="Viewport-VR"]
+
+[node name="Crate3" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5227, 0, -15.2378 )
+
+[node name="Crate8" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -14.5227, 0, -16.8747 )
+
+[node name="Crate9" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.964012, 0, -0.265859, 0, 1, 0, 0.265859, 0, 0.964012, -14.5227, 0, -18.6409 )
+
+[node name="Crate10" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.74166, 0, 0.670776, 0, 1, 0, -0.670776, 0, 0.74166, -14.5227, 0, -20.4214 )
+
+[node name="Crate11" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.98386, 0, 0.178939, 0, 1, 0, -0.178939, 0, 0.98386, -14.5227, 0, -22.1931 )
+
+[node name="Crate5" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.909418, 0, 0.415884, 0, 1, 0, -0.415884, 0, 0.909418, -14.5227, 0, -14.0441 )
+
+[node name="Crate6" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.814875, 0, -0.579637, 0, 1, 0, 0.579637, 0, 0.814875, -14.5227, 0, -12.4802 )
+
+[node name="Crate7" parent="Viewport-VR/World" instance=ExtResource( 6 )]
+transform = Transform( 0.995521, 0, -0.0945427, 0, 1, 0, 0.0945427, 0, 0.995521, -14.5227, 0, -10.4802 )
+
+[node name="Floor" parent="Viewport-VR/World" instance=ExtResource( 5 )]
+transform = Transform( 0.999999, 0, -0.00158825, 0, 1, 0, 0.00158825, 0, 0.999999, 0, -1, 0 )
+
+[node name="Wall" parent="Viewport-VR/World" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24 )
+
+[node name="Wall2" parent="Viewport-VR/World" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 24 )
+
+[node name="Wall3" parent="Viewport-VR/World" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24, 0, -2.38419e-07 )
+
+[node name="Wall4" parent="Viewport-VR/World" instance=ExtResource( 20 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24, 0, -2.38419e-07 )
+
+[node name="Magazine" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2269, 1.05875, -15.2245 )
+
+[node name="Magazine2" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2269, 1.07916, -16.8495 )
+
+[node name="Magazine3" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5922, 1.11749, -18.3679 )
+
+[node name="Magazine4" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2269, 1.08341, -22.1498 )
+
+[node name="Magazine5" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2269, 1.08341, -12.6673 )
+
+[node name="Magazine6" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3898, 1.08341, -14.1288 )
+
+[node name="Magazine7" parent="Viewport-VR/World" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5712, 1.08341, -12.4503 )
+
+[node name="M1912" parent="Viewport-VR/World" instance=ExtResource( 14 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -14.3394, 1.04385, -20.5482 )
+
+[node name="M1911" parent="Viewport-VR/World" instance=ExtResource( 14 )]
+transform = Transform( 0, -1, 0, 1, 0, 0, 0, 0, 1, 9.03102, 6.54341, 22.4602 )
+
+[node name="M1913" parent="Viewport-VR/World" instance=ExtResource( 14 )]
+transform = Transform( 0, -1, 0, 1, 0, 0, 0, 0, 1, -14.3641, 1.02767, -10.5783 )
+
+[node name="Target" parent="Viewport-VR/World" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9589, 1.46185, -15 )
+
+[node name="Target2" parent="Viewport-VR/World" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9589, 1.46185, -12 )
+
+[node name="Target3" parent="Viewport-VR/World" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9589, 1.46185, -18 )
+
+[node name="Target4" parent="Viewport-VR/World" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9589, 1.46185, -21 )
+
+[node name="Sphere_Target" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 18.0414, 2.65995, 3.23578 )
+
+[node name="Sphere_Target2" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 6.2148, 7.09989, 4.37818 )
+
+[node name="Sphere_Target3" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 7.42568, 10.1889, -21.3368 )
+
+[node name="Sphere_Target4" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -21.5813, 2.65995, 2.87769 )
+
+[node name="Sphere_Target5" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -10.8389, 6.80676, 12.9167 )
+
+[node name="Sphere_Target6" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 3.63301, 8.50593, 11.8777 )
+
+[node name="Sphere_Target7" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -13.5813, 12.5229, -4.05918 )
+
+[node name="Sphere_Target8" parent="Viewport-VR/World" instance=ExtResource( 19 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -3.78776, 7.90653, -12.0458 )
+
+[node name="GripTest001" parent="Viewport-VR/World" instance=ExtResource( 27 )]
+transform = Transform( 0.988512, -0.15114, 0, 0.15114, 0.988512, 0, 0, 0, 1, -1.36944, 6, 18 )
+grabbable = true
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Viewport-VR/World"]
+transform = Transform( 0.104785, 0.770983, -0.628177, -0.102581, 0.636664, 0.764288, 0.98919, -0.0156468, 0.145801, -23.5378, 13.9255, 6.21416 )
+light_color = Color( 0.87451, 0.870588, 0.831373, 1 )
+light_energy = 3.15
+
+[node name="JungleGym" parent="Viewport-VR/World" instance=ExtResource( 26 )]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -13, 0, 18 )
+
+[node name="Grips" parent="Viewport-VR/World" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.0808, 0.76508, 18 )
+
+[node name="Grips2" parent="Viewport-VR/World" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.1297, 0, 18 )
+
+[node name="Grips3" parent="Viewport-VR/World" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.1297, 3, 18 )
+
+[node name="Ramp" parent="Viewport-VR/World" instance=ExtResource( 29 )]
+transform = Transform( -2.18557e-08, 0, 0.5, -0.277067, 0.416214, -1.2111e-08, -0.416214, -0.277067, -1.81933e-08, 12.1039, 2.57431, 8.94003 )
+
+[node name="JungleGym3" parent="Viewport-VR/World" instance=ExtResource( 26 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 12, 0, 18 )
+
+[node name="WorldEnvironment" parent="Viewport-VR/World" instance=ExtResource( 28 )]
+
+[node name="RockClimb" parent="Viewport-VR/World" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -16 )
+
+[node name="Spawns" type="Spatial" parent="Viewport-VR"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Viewport-VR"]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="ViewportContainer" parent="." instance=ExtResource( 2 )]
+
+[editable path="Viewport-VR/OVRFirstPerson"]

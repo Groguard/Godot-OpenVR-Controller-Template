@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rock_Impact_Slide_Wood_Cave_MONO_04.ogg-d65abbb69f9bedf64b7fbe507e51521f.oggstr"
+
+[deps]
+
+source_file="res://audio/Antisample_Rocks_and_Stones/Rock_Impact_Slide_Wood_Cave_MONO_04.ogg"
+dest_files=[ "res://.import/Rock_Impact_Slide_Wood_Cave_MONO_04.ogg-d65abbb69f9bedf64b7fbe507e51521f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

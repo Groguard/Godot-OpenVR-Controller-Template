@@ -1,0 +1,598 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Models/building/GripRail.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[node name="RockClimb" type="Spatial"]
+
+[node name="Wall" type="MeshInstance" parent="."]
+transform = Transform( 5, 0, 0, 0, 10, 0, 0, 0, 5, 0, 10, 4 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Wall"]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape" type="CollisionShape" parent="Wall/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="GripTest001" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0.8476, -1.08471 )
+
+[node name="GripTest002" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 1, 1.8476, -1.08471 )
+
+[node name="GripTest003" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, -1, 2.8476, -1.08471 )
+
+[node name="GripTest004" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.199997, -0.0100531, 0, 0.00100531, 1.99997, 0, 0, 0, 1, 0.384128, 3.8476, -1.08471 )
+
+[node name="GripTest005" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 1, 5.11709, -1.08471 )
+
+[node name="GripTest006" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 1.43196, 2.8448, -1.08471 )
+
+[node name="GripTest007" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 1.43196, 6.41869, -1.08471 )
+
+[node name="GripTest008" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, -1.56804, 6.41869, -1.08471 )
+
+[node name="GripTest009" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 2.74598, 7.46507, -1.08471 )
+
+[node name="GripTest010" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, -1.19035, 8.12497, -1.08471 )
+
+[node name="GripTest011" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, -0.152124, 6.69738, -1.08471 )
+
+[node name="GripTest012" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, 0, 0, 0, 2, 0, 0, 0, 1, 1.10546, 7.71489, -1.08471 )
+
+[node name="GripTest024" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, -3.85359, 10.2714, -1.08471 )
+
+[node name="GripTest023" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, -2.85359, 8.30088, -1.08471 )
+
+[node name="GripTest022" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, -1.85359, 11.2714, -1.08471 )
+
+[node name="GripTest021" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, -0.853585, 10.2714, -1.08471 )
+
+[node name="GripTest020" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 0.146415, 9.27139, -1.08471 )
+
+[node name="GripTest019" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, -2.35405, 9.59817, -1.08471 )
+
+[node name="GripTest018" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 1.71751, 8.83942, -1.08471 )
+
+[node name="GripTest017" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 1.71751, 11.8394, -1.08471 )
+
+[node name="GripTest016" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 3.71751, 8.83942, -1.08471 )
+
+[node name="GripTest015" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 3.71751, 10.8394, -1.08471 )
+
+[node name="GripTest014" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 1.73934, 10.6917, -1.08471 )
+
+[node name="GripTest013" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 2, 0, -0.2, -8.74228e-08, 0, 0, 0, 1, 2.68873, 9.69169, -1.08471 )
+
+[node name="GripTest036" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 2.86392, 20.4187, -1.08471 )
+
+[node name="GripTest035" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 1.86392, 19.4912, -1.08471 )
+
+[node name="GripTest034" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 3.86392, 18.4912, -1.08471 )
+
+[node name="GripTest033" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 2.86392, 17.4912, -1.08471 )
+
+[node name="GripTest032" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 1.86392, 16.4187, -1.08471 )
+
+[node name="GripTest031" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 1.43196, 17.9201, -1.08471 )
+
+[node name="GripTest030" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 1.43196, 14.8476, -1.08471 )
+
+[node name="GripTest029" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 4.43196, 14.8476, -1.08471 )
+
+[node name="GripTest028" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 1.43196, 12.5539, -1.08471 )
+
+[node name="GripTest027" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 3.43196, 12.5539, -1.08471 )
+
+[node name="GripTest026" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 3.28423, 14.8258, -1.08471 )
+
+[node name="GripTest025" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, 2.28423, 13.8764, -1.08471 )
+
+[node name="GripTest048" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -3.13608, 20.4187, -1.08471 )
+
+[node name="GripTest047" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -4.13608, 19.4187, -1.08471 )
+
+[node name="GripTest046" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -2.13608, 18.4912, -1.08471 )
+
+[node name="GripTest045" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -3.13608, 17.4912, -1.08471 )
+
+[node name="GripTest044" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -4.13608, 16.4187, -1.08471 )
+
+[node name="GripTest043" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -4.56804, 17.9201, -1.08471 )
+
+[node name="GripTest042" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -4.56804, 14.8476, -1.08471 )
+
+[node name="GripTest041" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -1.56804, 14.8476, -1.08471 )
+
+[node name="GripTest040" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -4.56804, 12.5539, -1.08471 )
+
+[node name="GripTest039" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -2.56804, 12.5539, -1.08471 )
+
+[node name="GripTest038" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -2.71577, 14.8258, -1.08471 )
+
+[node name="GripTest037" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 1.74846e-07, 0, -1.74846e-08, -2, 0, 0, 0, 1, -3.71577, 13.8764, -1.08471 )
+
+[node name="GripTest096" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 0.8476, 3.98332 )
+
+[node name="GripTest095" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 1.8476, 4.98332 )
+
+[node name="GripTest094" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 2.8476, 2.98332 )
+
+[node name="GripTest093" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 3.8476, 3.98332 )
+
+[node name="GripTest092" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 4.55388, 4.98332 )
+
+[node name="GripTest091" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 2.99727, 5.41529 )
+
+[node name="GripTest090" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 5.88146, 5.41529 )
+
+[node name="GripTest089" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 6.12497, 2.41529 )
+
+[node name="GripTest088" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 7.46507, 6.7293 )
+
+[node name="GripTest087" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 8.12497, 2.79297 )
+
+[node name="GripTest086" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 6.1468, 3.56302 )
+
+[node name="GripTest085" parent="." instance=ExtResource( 1 )]
+transform = Transform( -8.74228e-09, 0, -1, 0, 2, 0, 0.2, 0, -4.37114e-08, 5.04653, 7.19255, 4.9647 )
+
+[node name="GripTest084" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 10.2714, 0.129738 )
+
+[node name="GripTest083" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 8.30088, 1.12974 )
+
+[node name="GripTest082" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 11.2714, 2.12974 )
+
+[node name="GripTest081" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 10.2714, 3.12974 )
+
+[node name="GripTest080" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 9.27139, 4.12974 )
+
+[node name="GripTest079" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 9.59817, 1.62927 )
+
+[node name="GripTest078" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 8.83942, 5.70083 )
+
+[node name="GripTest077" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 11.8394, 5.70083 )
+
+[node name="GripTest076" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 8.83942, 7.70083 )
+
+[node name="GripTest075" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 10.8394, 7.70083 )
+
+[node name="GripTest074" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 10.6917, 5.72266 )
+
+[node name="GripTest073" parent="." instance=ExtResource( 1 )]
+transform = Transform( 3.82137e-16, -8.74228e-08, -1, -0.2, -8.74228e-08, 0, -8.74228e-09, 2, -4.37114e-08, 5.04653, 9.69169, 6.67205 )
+
+[node name="GripTest072" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 20.4187, 6.84725 )
+
+[node name="GripTest071" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 19.4912, 5.84725 )
+
+[node name="GripTest070" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 18.4912, 7.84725 )
+
+[node name="GripTest069" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 17.4912, 6.84725 )
+
+[node name="GripTest068" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 16.4187, 5.84725 )
+
+[node name="GripTest067" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 17.9201, 5.41529 )
+
+[node name="GripTest066" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8476, 5.41529 )
+
+[node name="GripTest065" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8476, 8.41529 )
+
+[node name="GripTest064" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 12.5539, 5.41529 )
+
+[node name="GripTest063" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 12.5539, 7.41529 )
+
+[node name="GripTest062" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8258, 7.26755 )
+
+[node name="GripTest061" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 13.8764, 6.26755 )
+
+[node name="GripTest060" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 20.4187, 0.847247 )
+
+[node name="GripTest059" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 19.4912, -0.152753 )
+
+[node name="GripTest058" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 18.4912, 1.84725 )
+
+[node name="GripTest057" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 17.4912, 0.847247 )
+
+[node name="GripTest056" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 16.4187, -0.152753 )
+
+[node name="GripTest055" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 17.9201, -0.584715 )
+
+[node name="GripTest054" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8476, -0.584715 )
+
+[node name="GripTest053" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8476, 2.41529 )
+
+[node name="GripTest052" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 12.5539, -0.584715 )
+
+[node name="GripTest051" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 12.5539, 1.41529 )
+
+[node name="GripTest050" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 14.8258, 1.26755 )
+
+[node name="GripTest049" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -7.64274e-15, -1, -1.74846e-08, -2, 0, -0.2, 1.74846e-07, -4.37114e-08, 5.04653, 13.8764, 0.267554 )
+
+[node name="GripTest144" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -0.0215044, 0.8476, 9.0641 )
+
+[node name="GripTest143" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -1.0215, 1.8476, 9.0641 )
+
+[node name="GripTest142" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, 0.978496, 2.8476, 9.0641 )
+
+[node name="GripTest141" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -0.538714, 3.67075, 9.0641 )
+
+[node name="GripTest140" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -1.0215, 4.74386, 9.0641 )
+
+[node name="GripTest139" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -1.45347, 3.01715, 9.0641 )
+
+[node name="GripTest138" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -1.45347, 6.12497, 9.0641 )
+
+[node name="GripTest137" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, 1.54653, 6.12497, 9.0641 )
+
+[node name="GripTest136" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -2.76749, 7.46507, 9.0641 )
+
+[node name="GripTest135" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, 1.16885, 8.12497, 9.0641 )
+
+[node name="GripTest134" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, 0.398802, 6.1468, 9.0641 )
+
+[node name="GripTest133" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.2, 0, 8.74228e-08, 0, 2, 0, -1.74846e-08, 0, -1, -1.11424, 7.45069, 9.0641 )
+
+[node name="GripTest132" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, 3.83208, 10.2714, 9.0641 )
+
+[node name="GripTest131" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, 2.83208, 8.30088, 9.0641 )
+
+[node name="GripTest130" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, 1.83208, 11.2714, 9.0641 )
+
+[node name="GripTest129" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, 0.832081, 10.2714, 9.0641 )
+
+[node name="GripTest128" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -0.167919, 9.27139, 9.0641 )
+
+[node name="GripTest127" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, 2.33255, 9.59817, 9.0641 )
+
+[node name="GripTest126" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -1.73901, 8.83942, 9.0641 )
+
+[node name="GripTest125" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -1.73901, 11.8394, 9.0641 )
+
+[node name="GripTest124" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -3.73901, 8.83942, 9.0641 )
+
+[node name="GripTest123" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -3.73901, 10.8394, 9.0641 )
+
+[node name="GripTest122" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -1.76085, 10.6917, 9.0641 )
+
+[node name="GripTest121" parent="." instance=ExtResource( 1 )]
+transform = Transform( 8.74228e-09, -2, 8.74228e-08, -0.2, -8.74228e-08, 0, 7.64274e-16, -1.74846e-07, -1, -2.71023, 9.69169, 9.0641 )
+
+[node name="GripTest120" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -2.88543, 20.4187, 9.0641 )
+
+[node name="GripTest119" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -1.88543, 19.4912, 9.0641 )
+
+[node name="GripTest118" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -3.88543, 18.4912, 9.0641 )
+
+[node name="GripTest117" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -2.88543, 17.4912, 9.0641 )
+
+[node name="GripTest116" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -1.88543, 16.4187, 9.0641 )
+
+[node name="GripTest115" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -1.45347, 17.9201, 9.0641 )
+
+[node name="GripTest114" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -1.45347, 14.8476, 9.0641 )
+
+[node name="GripTest113" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -4.45347, 14.8476, 9.0641 )
+
+[node name="GripTest112" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -1.45347, 12.5539, 9.0641 )
+
+[node name="GripTest111" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -3.45347, 12.5539, 9.0641 )
+
+[node name="GripTest110" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -3.30574, 14.8258, 9.0641 )
+
+[node name="GripTest109" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, -2.30574, 13.8764, 9.0641 )
+
+[node name="GripTest108" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 3.11457, 20.4187, 9.0641 )
+
+[node name="GripTest107" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 4.11457, 19.4912, 9.0641 )
+
+[node name="GripTest106" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 2.11457, 18.4912, 9.0641 )
+
+[node name="GripTest105" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 3.11457, 17.4912, 9.0641 )
+
+[node name="GripTest104" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 4.11457, 16.4187, 9.0641 )
+
+[node name="GripTest103" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 4.54653, 17.9201, 9.0641 )
+
+[node name="GripTest102" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 4.54653, 14.8476, 9.0641 )
+
+[node name="GripTest101" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 1.54653, 14.8476, 9.0641 )
+
+[node name="GripTest100" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 4.54653, 12.5539, 9.0641 )
+
+[node name="GripTest099" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 2.54653, 12.5539, 9.0641 )
+
+[node name="GripTest098" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 2.69426, 14.8258, 9.0641 )
+
+[node name="GripTest097" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.2, -1.74846e-07, 8.74228e-08, -1.74846e-08, -2, 0, 1.74846e-08, -1.52855e-14, -1, 3.69426, 13.8764, 9.0641 )
+
+[node name="GripTest192" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 0.8476, 3.99607 )
+
+[node name="GripTest191" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 1.8476, 2.99607 )
+
+[node name="GripTest190" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 2.8476, 4.99607 )
+
+[node name="GripTest189" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 3.8476, 3.99607 )
+
+[node name="GripTest188" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 4.8476, 2.99607 )
+
+[node name="GripTest187" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 3.07117, 2.5641 )
+
+[node name="GripTest186" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 6.12497, 2.14719 )
+
+[node name="GripTest185" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 6.12497, 5.5641 )
+
+[node name="GripTest184" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 7.46507, 1.25008 )
+
+[node name="GripTest183" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 8.12497, 5.18642 )
+
+[node name="GripTest182" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 6.1468, 4.41637 )
+
+[node name="GripTest181" parent="." instance=ExtResource( 1 )]
+transform = Transform( 2.62268e-08, 0, 1, 0, 2, 0, -0.2, 0, 1.31134e-07, -5.0431, 7.09619, 3.41637 )
+
+[node name="GripTest180" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 10.2714, 7.84965 )
+
+[node name="GripTest179" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 8.30088, 6.84965 )
+
+[node name="GripTest178" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 11.2714, 5.84965 )
+
+[node name="GripTest177" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 10.2714, 4.84965 )
+
+[node name="GripTest176" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 9.27139, 3.84965 )
+
+[node name="GripTest175" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 9.59817, 6.35012 )
+
+[node name="GripTest174" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 8.83942, 2.27856 )
+
+[node name="GripTest173" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 11.8394, 2.27856 )
+
+[node name="GripTest172" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 8.83942, 0.278557 )
+
+[node name="GripTest171" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 10.8394, 0.278557 )
+
+[node name="GripTest170" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 10.6917, 2.25672 )
+
+[node name="GripTest169" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1.14641e-15, 2.62268e-07, 1, -0.2, -8.74228e-08, 0, 8.74228e-09, -2, 1.31134e-07, -5.0431, 9.69169, 1.30734 )
+
+[node name="GripTest168" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 20.4187, 1.13214 )
+
+[node name="GripTest167" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 19.4187, 2.13214 )
+
+[node name="GripTest166" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 18.4912, 0.132142 )
+
+[node name="GripTest165" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 17.4912, 1.13214 )
+
+[node name="GripTest164" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 16.4187, 2.13214 )
+
+[node name="GripTest163" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 17.9201, 2.5641 )
+
+[node name="GripTest162" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8476, 2.5641 )
+
+[node name="GripTest161" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8476, -0.435898 )
+
+[node name="GripTest160" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 12.5539, 2.5641 )
+
+[node name="GripTest159" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 12.5539, 0.564104 )
+
+[node name="GripTest158" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8258, 0.711835 )
+
+[node name="GripTest157" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 13.8764, 1.71183 )
+
+[node name="GripTest156" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 20.4187, 7.13214 )
+
+[node name="GripTest155" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 19.4187, 8.13214 )
+
+[node name="GripTest154" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 18.4912, 6.13214 )
+
+[node name="GripTest153" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 17.4912, 7.13214 )
+
+[node name="GripTest152" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 16.4187, 8.13214 )
+
+[node name="GripTest151" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 17.9201, 8.5641 )
+
+[node name="GripTest150" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8476, 8.5641 )
+
+[node name="GripTest149" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8476, 5.5641 )
+
+[node name="GripTest148" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 12.5539, 8.5641 )
+
+[node name="GripTest147" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 12.5539, 6.5641 )
+
+[node name="GripTest146" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 14.8258, 6.71183 )
+
+[node name="GripTest145" parent="." instance=ExtResource( 1 )]
+transform = Transform( -2.62268e-08, 2.29282e-14, 1, -1.74846e-08, -2, 0, 0.2, -1.74846e-07, 1.31134e-07, -5.0431, 13.8764, 7.71183 )
