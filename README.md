@@ -12,6 +12,9 @@ This was built using Godot 3.2 and the latest openvr addon from the assests libr
 # Planned features
 - Teleport movement
 
+# Known issues
+- Can't walk up slopes
+
 Resources Used
 ---------------------
  - The OpenVR addon was created by Bastiaan Olij and is released under the MIT license. It can be found both on the [Asset Library](https://godotengine.org/asset-library/asset/150) and on [GitHub](https://github.com/GodotVR/godot-openvr-asset).
