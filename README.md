@@ -25,4 +25,4 @@ Resources Used
  - [Sound files](https://freesound.org/), [Gunshot sound](https://www.youtube.com/redirect?redir_token=ZgZTgBeHrZN-UyisPXJh9vI1zKl8MTU2MTk3NDkwN0AxNTYxODg4NTA3&event=video_description&v=EK91zvMhck0&q=https%3A%2F%2Ffreesound.org%2Fpeople%2FBrokenphono%2Fsounds%2F344142%2F), [Empty gun sound](https://www.youtube.com/redirect?redir_token=ZgZTgBeHrZN-UyisPXJh9vI1zKl8MTU2MTk3NDkwN0AxNTYxODg4NTA3&event=video_description&v=EK91zvMhck0&q=https%3A%2F%2Ffreesound.org%2Fpeople%2FKlawyKogut%2Fsounds%2F154934%2F), [Magazine insert](https://freesound.org/people/Pjkasinski3/sounds/171614/)
  - [Fonts](http://www.fonts101.com/), [Sci Fied 2002](http://www.fonts101.com/fonts/view/Standard/15898/Sci_Fied_2002)
  - [The hands](https://github.com/ValveSoftware/openvr/wiki/Hand-Skeleton)
- - [Some code, objects, and inspiration from Bastianns' godot-vr-weapons demo] (https://github.com/BastiaanOlij/godot-vr-weapons)
+ - [Some code, objects, and inspiration from Bastiaans' godot-vr-weapons demo] (https://github.com/BastiaanOlij/godot-vr-weapons)
