@@ -7,6 +7,10 @@ This was built using Godot 3.2 and the latest openvr addon from the assests libr
 - Climbable objects
 - Object tool belt
 - Basic Smooth locomotion
+- Actions
+
+# Planned features
+- Teleport movment
 
 Resources Used
 ---------------------
