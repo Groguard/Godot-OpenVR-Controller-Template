@@ -10,7 +10,7 @@ This was built using Godot 3.2 and the latest openvr addon from the assests libr
 - Actions
 
 # Planned features
-- Teleport movment
+- Teleport movement
 
 Resources Used
 ---------------------
