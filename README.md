@@ -1,6 +1,6 @@
 # Godot-OpenVR-Controller-Template
 A basic Godot OpenVR controller template
-This was built using Godot 3.2 and the latest openvr addon from the assests library.
+This was built using Godot 3.2 and the latest openvr addon from the assests library. I've made a few modifications to the default helper scenes to make some of the features in this demo work. If you update the scripts in this project, it will break.
 
 # Current Features
 - Picking up and dropping objects
@@ -9,10 +9,10 @@ This was built using Godot 3.2 and the latest openvr addon from the assests libr
 - Basic Smooth locomotion
 - Actions
 
-# Planned features
+# Planned Features
 - Teleport movement
 
-# Known issues
+# Known Issues
 - Can't walk up slopes
 
 Resources Used
